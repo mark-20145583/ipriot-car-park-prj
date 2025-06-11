@@ -61,7 +61,7 @@ Notes on using this guide:
 ✅
 9. Create a new Python file in the `src` directory called `main.py`. This will be the main script for your car park system.✅
 10. Create a new Python file in the `tests` directory called `test_car_park.py`. This will be the main script for your unit tests.✅
-11. In PyCharm, mark the `src` directory as a source root. This will allow you to import modules from the `src` directory in your unit tests; mark the `tests` directory as a test root. This will enable you to run your unit tests from the IDE, without having to mess around with relative imports (long story!).
+11. In PyCharm, mark the `src` directory as a source root. This will allow you to import modules from the `src` directory in your unit tests; mark the `tests` directory as a test root. This will enable you to run your unit tests from the IDE, without having to mess around with relative imports (long story!).✅
 12. Commit your changes to the repository, both locally and remotely:
 
       ```bash
