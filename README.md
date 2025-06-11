@@ -1,15 +1,10 @@
-# North Metro Software Python Project Template
+# Carpark Project
+> Mark Belstead - 20145583
 
-A Python project template for all new projects in North Metro Software
+## Overview
 
-You may use the guidelines under `org/` for assessments and projects in the IP4RIoT cluster.
+In this assessment, you must design and implement a simplified car park system using Object-Oriented Programming (OOP) concepts in Python. The system will consist of a car park, sensors, and displays to track the cars entering and exiting and the availability of parking bays.
 
-## Additional Examples
-Here are other good examples of onboarding documents that relate to git and version control for you to browse:
+The system will be implemented in Python using the PyCharm IDE. You will use version control to manage your project and submit your work.
 
-- [skybase](https://handbook.skybase.com.np/git-conventions/)
-- [thoughtbot](https://github.com/thoughtbot/guides/tree/main/git) (also see their excellent [code review](https://github.com/thoughtbot/guides/tree/main/code-review) guide!)
-- [GitLab Handbook](https://handbook.gitlab.com/handbook/product-development-flow/)
-
-# Note
-When using this repo as a template, you should update this readme to provide a general overview suitable for **YOUR** project.
+This guide provides detailed step-by-step instructions for completing the project. You do not have to use this guide, but it will make your life easier and ensure you meet all project requirements. If you choose not to follow the guide, read the submission requirements carefully (from your Blackboard Assessments tab) to ensure you meet all requirements.
