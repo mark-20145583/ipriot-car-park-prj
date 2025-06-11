@@ -92,9 +92,9 @@ After reading the task requirements, you should be able to identify the classes,
 
 | Class Name | Attributes | Methods |
 | ---------- | ---------- | ------- |
-| `CarPark`    |            |         |
-| `Sensor`     |            |         |
-| `Display`    |            |         |
+| `CarPark`    | number_of_bays, scanned_licence_plates          |   get_available_bays      |
+| `Sensor`     |            |     scan_plate    |
+| `Display`    |  ambient temperature, arbitary_announcements          |  update_display       |
 
 **Additional evidencing:**
 Ensure you have completed the previous table and include at least two methods and attributes for each.
