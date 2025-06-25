@@ -17,19 +17,23 @@ class CarPark:
         self.log_file.touch(exist_ok=True)
 
     def __str__(self):
+        """Return the locations current capacity."""
         return f"Car park at {self.location}, with capacity {self.capacity}."
 
     def write_config(self):
+        """Save config to file"""
         with open("config.json","w") as f:
             json.dump({"location": self.location,
                        "capacity": self.capacity,
                        "log_file": str(self.log_file)}, f)
 
     def _log_car_activity(self, plate, action):
+        """Record activity to log file"""
         with self.log_file.open("a") as f:
             f.write(f"{plate} {action} at {datetime.now():%Y-%m-%d %H:%M:%S}\n")
 
     def register(self, component):
+        """Register either sensor or display to the carpark"""
         if not isinstance(component, ( Sensor, Display)):
             raise TypeError("Object must be a Sensor or Display.")
         else:
@@ -39,16 +43,19 @@ class CarPark:
                 self.displays.append(component)
 
     def add_car(self, plate):
+        """Add a car to the carpark"""
         self.plates.append(plate)
         self.update_displays()
         self._log_car_activity(plate, "entered")
 
     def remove_car(self, plate):
+        """Remove a car from the carpark"""
         self.plates.remove(plate)
         self.update_displays()
         self._log_car_activity(plate, "exited")
 
     def update_displays(self):
+        """Update displays with accurate values"""
         data = {
             "available_bays": self.available_bays,
             "temperature": 25
@@ -57,6 +64,7 @@ class CarPark:
 
     @property
     def available_bays(self):
+        """The number of bays available for use"""
         if len(self.plates) >= self.capacity:
             return 0
         else:
@@ -64,6 +72,7 @@ class CarPark:
 
     @classmethod
     def from_config(cls, config_file=Path("config.json")):
+        """Load a carpark from a pre-set config file"""
         config_file = config_file if isinstance(config_file, Path) else Path(config_file)
         with config_file.open() as f:
             config = json.load(f)

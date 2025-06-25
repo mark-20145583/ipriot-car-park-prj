@@ -7,9 +7,11 @@ class Display:
         self.car_park = car_park
 
     def __str__(self):
+        """Return the display's message"""
         return(f"Display {self.id}: {self.message}")
 
     def update(self, data):
+        """Update displays values"""
         for key, value in data.items():
             if key == "message":
                 self.message = value
