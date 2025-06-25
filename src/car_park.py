@@ -23,7 +23,7 @@ class CarPark:
         with open("config.json","w") as f:
             json.dump({"location": self.location,
                        "capacity": self.capacity,
-                       "log_file": self.log_file}, f)
+                       "log_file": str(self.log_file)}, f)
 
     def _log_car_activity(self, plate, action):
         with self.log_file.open("a") as f:

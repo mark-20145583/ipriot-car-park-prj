@@ -1,0 +1,12 @@
+plate0 entered at 2025-06-25 20:54:29
+plate1 entered at 2025-06-25 20:54:29
+plate2 entered at 2025-06-25 20:54:29
+plate3 entered at 2025-06-25 20:54:29
+plate4 entered at 2025-06-25 20:54:29
+plate5 entered at 2025-06-25 20:54:29
+plate6 entered at 2025-06-25 20:54:29
+plate7 entered at 2025-06-25 20:54:29
+plate8 entered at 2025-06-25 20:54:29
+plate9 entered at 2025-06-25 20:54:29
+plate0 exited at 2025-06-25 20:54:29
+plate1 exited at 2025-06-25 20:54:29
