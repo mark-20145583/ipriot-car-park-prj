@@ -476,17 +476,18 @@ Answer the following questions:
 >
 > 1. **Which class is responsible for each of the following pieces of information (and why)?**
 >    - *The number of available bays*
->      `Answer here...`
+>      `car_park`
 >    - *The current temperature*
->      `Answer here...`
+>      `displays`
 >    - *The time*
->      `Answer here...`
+>      `displays`
 >
 > 2. **What is the difference between an attribute and a property?**
->    `Answer here...`
+>    `attribute is a value provided to the class, a property is a static value within the class`
 >
 > 3. **Why do you think we used a dictionary to hold the data we passed the display? List at least one advantage and one disadvantage of this approach.**
->    `Answer here...`
+>    `Advantage: Can easily add/remove using .append() and .remove()`
+>     `Disadvantage: If the system goes offline, the data is lost`
 
 #### 2.7.5. Add a detect vehicle method to the Sensor class
 
