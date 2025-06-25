@@ -1,7 +1,8 @@
 from sensor import Sensor
 from display import Display
 from pathlib import Path
-from datetime import datetime # we'll use this to timestamp entries
+from datetime import datetime # we'll use this to timestamp entr
+import json
 
 class CarPark:
     def __init__(self, location="Unknown", capacity=100, plates = None, displays = None, sensors = None, log_file=Path("log.txt")):
@@ -16,7 +17,13 @@ class CarPark:
         self.log_file.touch(exist_ok=True)
 
     def __str__(self):
-        return(f"Car park at {self.location}, with capacity {self.capacity}.")
+        return f"Car park at {self.location}, with capacity {self.capacity}."
+
+    def write_config(self):
+        with open("config.json","w") as f:
+            json.dump({"location": self.location,
+                       "capacity": self.capacity,
+                       "log_file": self.log_file}, f)
 
     def _log_car_activity(self, plate, action):
         with self.log_file.open("a") as f:
@@ -55,3 +62,9 @@ class CarPark:
         else:
             return self.capacity - len(self.plates)
 
+    @classmethod
+    def from_config(cls, config_file=Path("config.json")):
+        config_file = config_file if isinstance(config_file, Path) else Path(config_file)
+        with config_file.open() as f:
+            config = json.load(f)
+        return cls(config["location"],config["capacity"], log_file=config["log_file"])
