@@ -350,7 +350,7 @@ Now, we can add the code to add the `component` to the appropriate list. Add the
    # ... inside the register method
    if isinstance(component, Sensor):
       self.sensors.append(component)
-   # TODO: (optional) add an elif to check if the component is a Display - MUST
+  
    ```
 
 **Additional evidencing:**
@@ -899,7 +899,7 @@ Notice how we have inadvertently made our test code hard to maintain (if we chan
    ```python
    # inside the TestCarPark class
    def test_car_logged_when_entering(self):
-      new_carpark = CarPark("123 Example Street", 100, log_file = "new_log.txt") # TODO: change this to use a class attribute or new instance variable
+      new_carpark = CarPark("123 Example Street", 100, log_file = "new_log.txt") 
       self.car_park.add_car("NEW-001")
       with self.car_park.log_file.open() as f:
          last_line = f.readlines()[-1]
@@ -908,7 +908,7 @@ Notice how we have inadvertently made our test code hard to maintain (if we chan
       self.assertIn("\n", last_line) # check entry has a new line
 
    def test_car_logged_when_exiting(self):
-      new_carpark = CarPark("123 Example Street", 100, log_file = "new_log.txt") # TODO: change this to use a class attribute or new instance variable
+      new_carpark = CarPark("123 Example Street", 100, log_file = "new_log.txt")
       self.car_park.add_car("NEW-001")
       self.car_park.remove_car("NEW-001")
       with self.car_park.log_file.open() as f:
@@ -1027,7 +1027,7 @@ We are going to do the latter:
    ```python
    # ... inside the CarPark class
    def write_config(self):
-      with open("config.json", "w") as f: # TODO: use self.config_file; use Path; add optional parm to __init__
+      with open("config.json", "w") as f: 
          json.dump({"location": self.location,
                     "capacity": self.capacity,
                     "log_file": str(self.log_file)}, f)
@@ -1077,14 +1077,14 @@ In your final submission, you must include any files you created or modified. Th
 3. Now complete all the TODO steps outlined below:
 
    ```python
-   # TODO: create a car park object with the location moondalup, capacity 100, and log_file "moondalup.txt"
-   # TODO: Write the car park configuration to a file called "moondalup_config.json"
-   # TODO: Reinitialize the car park object from the "moondalup_config.json" file
-   # TODO: create an entry sensor object with id 1, is_active True, and car_park car_park
-   # TODO: create an exit sensor object with id 2, is_active True, and car_park car_park
-   # TODO: create a display object with id 1, message "Welcome to Moondalup", is_on True, and car_park car_park
-   # TODO: drive 10 cars into the car park (must be triggered via the sensor - NOT by calling car_park.add_car directly)
-   # TODO: drive 2 cars out of the car park (must be triggered via the sensor - NOT by calling car_park.remove_car directly)
+   # TODO: create a car park object with the location moondalup, capacity 100, and log_file "moondalup.txt" ✅
+   # TODO: Write the car park configuration to a file called "moondalup_config.json"✅
+   # TODO: Reinitialize the car park object from the "moondalup_config.json" file✅
+   # TODO: create an entry sensor object with id 1, is_active True, and car_park car_park✅
+   # TODO: create an exit sensor object with id 2, is_active True, and car_park car_park✅
+   # TODO: create a display object with id 1, message "Welcome to Moondalup", is_on True, and car_park car_park✅
+   # TODO: drive 10 cars into the car park (must be triggered via the sensor - NOT by calling car_park.add_car directly)✅
+   # TODO: drive 2 cars out of the car park (must be triggered via the sensor - NOT by calling car_park.remove_car directly)✅
    
    ```
 
