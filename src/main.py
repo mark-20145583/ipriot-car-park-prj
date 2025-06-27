@@ -18,7 +18,7 @@ exit_sensor = ExitSensor(2,True,car_park)
 display = Display(1, "Welcome to Moodalup", True, car_park)
 
 for car in range(10):
-    entry_sensor.update_car_park(f"1PPP0{car}")
+    entry_sensor.detect_vehicle()
 
 for car in range(2):
-    exit_sensor.update_car_park(f"1PPP0{car}")
+    exit_sensor.detect_vehicle()
